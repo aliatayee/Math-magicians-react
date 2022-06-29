@@ -45,15 +45,17 @@
   border-width: 1px 1px 0 0;
   border-style: solid;
 }
+
 .zeroBtn {
   width: 50% !important;
 }
+
 .equal {
   border-right: none !important;
 }
 
 .calc-button-row button.opt {
-  color: #ffffff;
+  color: #fff;
   background-color: #f5913e;
 }
 
@@ -68,5 +70,5 @@
 
 .calc-button-row button:hover {
   background: #3e4b5c;
-  color: #ffffff;
+  color: #fff;
 }
