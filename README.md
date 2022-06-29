@@ -2,12 +2,12 @@
 # Math magicians
 
 ## Major Technologies
-HTML5
-CSS
-JAVASCRIPT
-REACT
-NPM
-WEBPACK
+- [ ] HTML5
+- [ ] CSS
+- [ ] JAVASCRIPT
+- [ ] REACT
+- [ ] NPM
+- [ ] WEBPACK
 ### Demo
 Coming Soon
 ### Install & Setup
@@ -16,13 +16,13 @@ To setup and install this sample Leaderboard project, follow the below steps:
 - Clone this project by the command: 
 
 ```
-$ git clone https://github.com/aliatayee/first-react-app
+$ git clone https://github.com/aliatayee/Math-magicians-react
 ```
 
 - Then switch to the project folder by the bellow query:
 
 ```
-$ cd first-react-app
+$ cd Math-magicians-react
 ```
 
 - Then run the below command to install dependencies
