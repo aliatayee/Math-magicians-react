@@ -1,41 +1,43 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculator';
 
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Calculator = () => {
+  const [object, setObject] = useState({ total: 0, next: null, operation: null });
+  const { total, next, operation } = object;
 
-  render() {
-    return (
+  const clickHandle = (event) => {
+    setObject((state) => calculate(state, event.target.value));
+  };
 
-      <div className="calc-body">
-        <div className="calc-screen">
-          <div id="calc-operation">0 </div>
-        </div>
-        <div className="calc-button-row">
-          <button type="button">AC</button>
-          <button type="button">&#43;&#47;&#8722;</button>
-          <button type="button">&#37;</button>
-          <button type="button" className="opt">&#247;</button>
-          <button type="button">7</button>
-          <button type="button">8</button>
-          <button type="button">9</button>
-          <button type="button" className="opt">&#215;</button>
-          <button type="button">4</button>
-          <button type="button">5</button>
-          <button type="button">6</button>
-          <button type="button" className="opt">&#8722;</button>
-          <button type="button">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button type="button" className="opt">&#43;</button>
-          <button type="button" className="zeroBtn">0</button>
-          <button type="button">.</button>
-          <button type="button" className="opt equal">&#61;</button>
-        </div>
+  return (
+
+    <div className="calc-body">
+      <div className="calc-screen">
+        <input type="text" id="calc-operation" value={(total || '') + (operation || '') + (next || '')} disabled />
       </div>
-    );
-  }
-}
+      <div className="calc-button-row">
+        <input type="button" value="AC" onClick={clickHandle} />
+        <input type="button" value="+/-" onClick={clickHandle} />
+        <input type="button" value="%" onClick={clickHandle} />
+        <input type="button" value="÷" onClick={clickHandle} className="opt" />
+        <input type="button" value="7" onClick={clickHandle} />
+        <input type="button" value="8" onClick={clickHandle} />
+        <input type="button" value="9" onClick={clickHandle} />
+        <input type="button" value="x" onClick={clickHandle} className="opt" />
+        <input type="button" value="4" onClick={clickHandle} />
+        <input type="button" value="5" onClick={clickHandle} />
+        <input type="button" value="6" onClick={clickHandle} />
+        <input type="button" value="-" onClick={clickHandle} className="opt" />
+        <input type="button" value="1" onClick={clickHandle} />
+        <input type="button" value="2" onClick={clickHandle} />
+        <input type="button" value="3" onClick={clickHandle} />
+        <input type="button" value="+" onClick={clickHandle} className="opt" />
+        <input type="button" value="0" onClick={clickHandle} className="zeroBtn" />
+        <input type="button" value="." onClick={clickHandle} />
+        <input type="button" value="=" onClick={clickHandle} className="opt equal" />
+      </div>
+    </div>
+  );
+};
+
 export default Calculator;
