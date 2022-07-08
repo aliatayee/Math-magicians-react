@@ -9,7 +9,9 @@
 - [ ] NPM
 - [ ] WEBPACK
 ### Demo
-Coming Soon
+[Heroku Demo](https://bookstore-aliatayee.herokuapp.com/)
+<br>
+[Netlify Demo](https://bookstore-aliatayee.netlify.app/)
 ### Install & Setup
 
 To setup and install this sample Leaderboard project, follow the below steps:
